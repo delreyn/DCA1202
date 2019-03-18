@@ -55,8 +55,8 @@ void desenha(int* A,int M,int N,int O, int r){
         for(int j=0;j<N; j++){
             for (int k=0; k<O; k++){
                 offset = (A + i*N*O + j*O + k);
-                if(sqrt((x0 - i)*(x0 - i) + (y0-j)*(y0-j) + (z0-k)*(z0-k)) <= r ) offset =  1;
-                else offset = 0;
+                if(sqrt((x0 - i)*(x0 - i) + (y0-j)*(y0-j) + (z0-k)*(z0-k)) <= r ) *offset =  1;
+                else *offset = 0;
             }
         }
     }
