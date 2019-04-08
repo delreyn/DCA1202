@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int crescente(const void * a, const void * b)
+{
+	//resgata os valores atraves dos endereços
+    float l = *(const float *)a; 
+    float r = *(const float *)b;
+  return ((int) l - r );
+}
+
+
+int main()
+{
+    int n, i, j;
+    printf("Digite o tamanho: ");
+    scanf("%d",&n);
+    printf("\n");
+    
+    float *x;
+    x=(float*) malloc(n*sizeof(float));
+    for (i = 0; i < n; i++){
+		printf("Digite o valor na posicao %d: ", i+1);
+		scanf("%f", &x[i]);
+	}
+	printf("O ARRAY INSERIDO EH:  ");
+	for (i = 0; i < n; i++){
+		printf(" %f ", x[i]);
+	}
+
+	//Ordenar o array 
+    qsort((void*)x, n, sizeof(x[0]),crescente);
+    
+    printf("\n O array ordenado eh: \n");
+    
+    for (i = 0; i < n; i++){
+		printf(" %f ", x[i]);
+	}
+	
+	free(x);
+    return 0;
+}

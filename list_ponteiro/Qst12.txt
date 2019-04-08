@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+	int i=3;
+	aloha[2] = value;
+	scanf("%f", &aloha);
+	aloha = value; 			 // Invalido. Não se pode realizar atribuições com um tipo array
+	printf("%f", aloha); 
+	coisas[4][4] = aloha[3];
+	coisas[5] = aloha;		// Invalido. Não se pode realizar atribuições com um tipo array
+	pf = value; 			// Invalido. Ponteiros so podem receber atribuições de endereços
+	pf = aloha;
+	return 0;
+}

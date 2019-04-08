@@ -1,0 +1,9 @@
+
+
+"p = mat + 1;" Armazena em p o endereço "&mat[0]" + sizeof(int) bytes. Logo: &mat[1].
+
+"p = mat++;" não é válida. mat não é um ponteiro.
+
+"p = ++mat;" enfrenta o mesmo problema de mat++.
+
+"x = (*mat)++;" armazena o valor de "mat[0]" em x e depois tenta incrementa mat[0] + 1.

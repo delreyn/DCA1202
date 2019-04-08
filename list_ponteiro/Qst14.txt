@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, j;
+    printf("Digite o tamanho: ");
+    scanf("%d",&n);
+    printf("\n");
+    
+    float *x, maior, aux;
+    x=(float*) malloc(n*sizeof(float));
+    for (i = 0; i < n; i++){
+		printf("Digite o valor na posicao %d: ", i+1);
+		scanf("%f", &x[i]);
+	}
+	printf("O ARRAY INSERIDO EH:  ");
+	for (i = 0; i < n; i++){
+		printf(" %f ", x[i]);
+	}
+	//Ordenar o array
+	printf("\nARRAY ORDENADO: \n");
+	for (i = 1; i < n; i++){
+		for (j = i; j > 0; j--){
+		if (x[j]<x[j-1]){
+			maior = x[j];
+			x[j] = x[j-1];
+			x[j-1] = maior;
+		}
+	}
+}
+for (i = 0; i < n; i++){
+		printf(" %f ", x[i]);
+	}
+	free(x);
+    return 0;
+}

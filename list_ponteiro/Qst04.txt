@@ -1,0 +1,8 @@
+p = i;               	// ilegal
+q = &j;            	// valido
+p = &*&i;           	// valido
+i = (*&)j;             	// ilegal
+i = *&j;               	// valido
+i = *&*&j;          	// ilegal
+q = *p;               	// ilegal
+i = (*p)++ + *q; 	// valido

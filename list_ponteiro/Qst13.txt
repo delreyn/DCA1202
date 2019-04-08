@@ -1,0 +1,16 @@
+Ponteiros tem a utilidade de armazenar endereços. Ponteiros de funções possuem uma utilidade similar a ponteiros comuns, porem em vez de armazenar endereços de variaves, são armazedos endereços de funções.
+
+
+ 
+int main()
+{
+    int (*fcnPtr)(int) = foo; // atribui fcnPtr para a função foo
+    fcnPtr(5); // Chama funçao foo(5) atraves de fcnPtr.
+ 
+    return 0;
+}
+
+int foo(int x)
+{
+    return x;
+}

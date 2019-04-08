@@ -1,0 +1,30 @@
+
+Para cada uma das somas, a quantidade de bits seria acrescentada para chegar a próxima posição
+do array,dependendo do tipo de array, sendo a proxima posição: [endereço atual] + n*sizeof(TIPO) bits.
+Na realidade somente o tipo INT se comporta de forma diferente, tendo valor de 4 bytes também
+o codigo abaixo demonstra como se comporta cada soma na maquina real.
+
+O programa abaixo é uma implementação:
+
+int main(int argc, char *argv[]) {
+	char x1[4];
+	int x2[4];
+	float x3[4];
+	double x4[4];
+	/*A questão faz a suposição de que a máquina utilize o char ocupando 1 byte, 
+	o int ocupando 2 bytes, o float ocupando 4 bytes e o double ocupando 8 bytes.
+	Para cada uma das somas, a quantidade de bits seria acrescentada para chegar a próxima posição
+	do array, para +1, dependendo do tipo, acrescentaria 1, 2, 4 ou 8 bits para cada endereço
+	dependendo do tipo de array, e assim sucessivamente para +2 e +3;
+	Na realidade somente o tipo INT se comporta de forma diferente, tendo valor de 4 bytes também
+	o codigo abaixo demonstra como se comporta cada soma na maquina real. */
+	printf("%d %d %d %d\n", x1, x1+1, x1+2, x1+3);
+	//O tipo char ocupa 1 Byte, a cada soma, é acrescentado 1 bit para a proxima posição do array;
+	printf("%d %d %d %d \n", x2, x2+1, x2+2, x2+3);
+	//O tipo int ocupa 4 Bytes, a cada soma, é acrescentado 4 bits para a proxima posição do array;
+	printf("%d %d %d %d\n", x3, x3+1, x3+2, x3+3);
+	//O tipo float ocupa 4 Bytes, a cada soma, é acrescentado 4 bits para a proxima posição do array;
+	printf("%d %d %d %d\n", x4, x4+1, x4+2, x4+3);
+	//O tipo double ocupa 8 Bytes, a cada soma, é acrescentado 8 bits para a proxima posição do array;
+	return 0;
+}

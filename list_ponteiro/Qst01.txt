@@ -1,0 +1,8 @@
+Entender o conceito de ponteiros é fundamental para computação, pois ele está diretamente ligado a endereços de memoria e eficiencia.
+
+Algumas das razões praticas do uso de ponteiro são:
+
+1. Que permitem o gerenciamento de memoria dinamica;
+2. Reduzem o tamanho e a complexidade de um programa;
+3. Aumenta a velocidade da execução e, portanto, reduz o tempo de execução;
+4. Possui grande eficiencia em manipular dados em arrays ou tabelas.  

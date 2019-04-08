@@ -1,0 +1,9 @@
+"printf("\ni = %d",i);" será mostrado o valor do contador "i" dentro do laço.
+
+"printf("vet[%d] = %.1f",i, vet[i]);" será mostrado o valor do componente "i" do vetor "vet".
+
+"printf("*(f + %d) = %.1f",i, *(f+i));"Irá também mostrar o valor do componente "i" do vetor "vet".
+
+"printf("&vet[%d] = %X",i, &vet[i]);" mostra o endereço do componente "i" do vetor "vet".
+
+"printf("(f + %d) = %X",i, f+i);" também mostra o endereço do componente "i" do vetor "vet".

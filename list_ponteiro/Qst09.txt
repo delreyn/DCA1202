@@ -1,0 +1,13 @@
+
+for(i=0;i<3;i++){
+            printf("%d ",*(vet+i));
+        }
+
+Mostra o valor int de cada componente do vetor "vet".
+
+-------
+
+for(i=0;i<3;i++){
+            printf("%X ",vet+i);
+        }
+Mostra o endereço de cada componente do vetor "vet".
